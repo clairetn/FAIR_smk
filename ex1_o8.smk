@@ -19,6 +19,8 @@ rule multiqc:
     "envs/multiqc-1.9.yml"
   container:
     "https://depot.galaxyproject.org/singularity/multiqc:1.10.1--pyhdfd78af_1"
+  envmodules:
+    "multiqc/1.9"
   shell: "multiqc {input} 1>{log.std} 2>{log.err}" 
 
 rule fastqc:
@@ -34,5 +36,7 @@ rule fastqc:
     "envs/fastqc-0.11.9.yml"
   container:
      "docker://biocontainers/fastqc:v0.11.9_cv8"
+  envmodules:
+    "fastqc/0.11.9"
   shell: "fastqc --outdir FastQC/ {input} 1>{log.std} 2>{log.err}"
 
