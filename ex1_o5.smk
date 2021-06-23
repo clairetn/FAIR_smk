@@ -9,10 +9,13 @@ rule all:
 
 rule multiqc:
   output:
-    "multiqc_report.html"
+    "multiqc_report.html",
+    directory("multiqc_data")
   input:
-    directory("FastQC")
+    expand("FastQC/{sample}_fastqc.zip", sample = SAMPLES)
   shell: "multiqc {input}"
+
+
 
 rule fastqc:
   output:

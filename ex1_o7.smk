@@ -11,12 +11,11 @@ rule multiqc:
   output:
     "multiqc_report.html"
   input:
-    directory("FastQC")
+    expand("FastQC/{sample}_fastqc.zip", sample = SAMPLES)
   log:
     std="Logs/multiqc.std",
     err="Logs/multiqc.err"
   shell: "multiqc {input} 1>{log.std} 2>{log.err}" 
-
 
 rule fastqc:
   output:

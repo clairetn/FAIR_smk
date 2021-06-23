@@ -2,6 +2,21 @@
 
 SAMPLES = ["SRR3099585_chr18","SRR3099586_chr18","SRR3099587_chr18"]
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 rule fastqc:
   output:
     expand("FastQC/{sample}_fastqc.zip", sample = SAMPLES),

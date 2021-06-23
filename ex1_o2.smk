@@ -1,5 +1,22 @@
 # the rule concept, 2 inputs
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 rule fastqc:
   output:
     "FastQC/SRR3099585_chr18_fastqc.zip", 
