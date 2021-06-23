@@ -17,6 +17,8 @@ rule multiqc:
     err="Logs/multiqc.err"
   conda:
     "envs/multiqc-1.9.yml"
+  container:
+    "https://depot.galaxyproject.org/singularity/multiqc:1.10.1--pyhdfd78af_1"
   shell: "multiqc {input} 1>{log.std} 2>{log.err}" 
 
 rule fastqc:
@@ -30,5 +32,7 @@ rule fastqc:
     err="Logs/{sample}_fastqc.err"
   conda:
     "envs/fastqc-0.11.9.yml"
+  container:
+     "docker://biocontainers/fastqc:v0.11.9_cv8"
   shell: "fastqc --outdir FastQC/ {input} 1>{log.std} 2>{log.err}"
 
