@@ -1,0 +1,8 @@
+channels:
+  - conda-forge
+  - bioconda
+  - default
+dependencies: 
+  - snakemake-minimal=6.5.0
+  - fastqc=0.11.9
+  - multiqc=1.9
