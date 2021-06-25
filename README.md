@@ -20,21 +20,21 @@ Snakemake documentation: [Integrated Package Management](https://snakemake.readt
 
 ```bash
 module load snakemake slurm-drmaa conda
-snakemake --drmaa --jobs=4 -s ex1_o8.smk --configfile envfair.yml --use-conda
+snakemake --drmaa --jobs=4 -s ex1_o8.smk --use-conda
 ```
 
 #### `--use-singularity`
 
 ```bash
 module load snakemake slurm-drmaa singularity
-snakemake --drmaa --jobs=4 -s ex1_o8.smk --configfile envfair.yml --use-singularity
+snakemake --drmaa --jobs=4 -s ex1_o8.smk --use-singularity
 ```
 
 #### `--use-envmodule`
 
 ```bash
 module load snakemake slurm-drmaa 
-snakemake --drmaa --jobs=4 -s ex1_o8.smk --configfile envfair.yml --use-envmodule
+snakemake --drmaa --jobs=4 -s ex1_o8.smk --use-envmodule
 ```
 
 
