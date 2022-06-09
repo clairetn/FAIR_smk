@@ -16,11 +16,11 @@ rule multiqc:
     std="Logs/multiqc.std",
     err="Logs/multiqc.err"
   conda:
-    "envs/multiqc-1.9.yml"
+    "envs/multiqc-1.12.yml"
   container:
     "https://depot.galaxyproject.org/singularity/multiqc:1.10.1--pyhdfd78af_1"
   envmodules:
-    "multiqc/1.9"
+    "multiqc/1.12"
   shell: "multiqc {input} 1>{log.std} 2>{log.err}" 
 
 rule fastqc:
