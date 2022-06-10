@@ -5,4 +5,4 @@ channels:
 dependencies: 
   - bioconda::snakemake-minimal>=6.5
   - bioconda::fastqc=0.11.9
-  - bioconda::multiqc=1.9
+  - bioconda::multiqc=1.12
