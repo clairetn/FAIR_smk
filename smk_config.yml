@@ -1,0 +1,6 @@
+genome:
+  O.tauri_genome.fna
+annots:
+  O.tauri_annotation.gff
+dataDir:
+  Data/
