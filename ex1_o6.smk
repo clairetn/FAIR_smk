@@ -4,7 +4,7 @@ SAMPLES = ["SRR3099585_chr18","SRR3099586_chr18","SRR3099587_chr18"]
 
 rule all:
   input:
-    expand("FastQC/{sample}_fastqc.html", sample=SAMPLES),
+    expand("FastQC/{sample}_fastqc.zip", sample=SAMPLES),
     "multiqc_report.html"
 
 rule multiqc:
