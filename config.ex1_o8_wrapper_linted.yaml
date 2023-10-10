@@ -1,0 +1,5 @@
+samples:
+  - SRR3099585_chr18
+  - SRR3099586_chr18
+  - SRR3099587_chr18
+datadir: Data
