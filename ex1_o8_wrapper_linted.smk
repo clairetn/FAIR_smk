@@ -14,7 +14,7 @@ datadir = config.get("datadir", "Data")
 # keyword in python, we prefer the name "target"
 rule target:
     input:
-        expand("FastQC/{sample}_fastqc.html", sample=SAMPLES),
+        expand("FastQC/{sample}_fastqc.zip", sample=SAMPLES),
         "multiqc_report.html",
 
 
